@@ -146,10 +146,10 @@ function whilemultiplybyTwoUntilGreaterThan100(num){
 // whilemultiplybyTwoUntilGreaterThan100(2);
 
 // For loops: Loops that are designed to run a given number of times. Think more math thinking.
-
-for (var incrementer = 1; incrementer <= 10; incrementer++) {
-    console.log("This loop has run " + incrementer + " time(s).");
-}
+//
+// for (var incrementer = 1; incrementer <= 10; incrementer++) {
+//     console.log("This loop has run " + incrementer + " time(s).");
+// }
 
 // The for loop has more to it as you can see. Let's break down the arguments:
 
@@ -175,37 +175,42 @@ for (var incrementer = 1; incrementer <= 10; incrementer++) {
 // sayHelloXTimes(18);
 
 // And we can use this with conditionals!
-
-for (var i = 1; i < 25; i++){
-    if (i % 6 == 0) console.log("Codeup");
-    else if (i % 2 == 0) console.log("Code");
-    else if (i % 3 == 0) console.log("Up");
-    else console.log(i);
-}
+//
+// for (var i = 1; i < 25; i++){
+//     if (i % 6 == 0) {
+//         console.log("Codeup");
+//     } else if (i % 2 == 0) {
+//         console.log("Code");
+//     } else if (i % 3 == 0) {
+//         console.log("Up");
+//     } else {
+//         console.log(i);}
+// }
 
 // TODO: Quasar, how would we refactor the above back into a WHILE loop as we saw earlier?
 
 // Below is a funky example that works, but will rely on moving between different data types.
 // for (var i = "A"; i.length < 8; i = i + "A") {
-//     console.log("This is a bit of a tricky way to run a for loop, but hey, it works...");
+//     console.log("This is a bit of a tricky way to run a for loop, but hey, it works. This is what 'i' length looks like: " + i.length);
 // }
+
+// BREAK AND CONTINUE: Ways to manipulate the behavior of your loop [stop vs skip]
 
 // We can get a loop to stop using break;
 
-// var x = 0;
-//
+var x = 0;
+
 // while (true) {
 //     alert("This is the song that never ends. It just goes on and on my friends. Somebody started singing not knowing what it was, and now we'll all just keep on singing this because");
 //     x++;
-//     if (x === 5) {
+//     if (x === 10) {
 //         alert("LambChop, cut it out!!")
 //         break;
 //     }
 // }
 
-
-// for (var j = 5; j < 100000; j += 5) {
-//     if (j === 25) {
+// for (var j = 0; j < 100000; j += 5) {
+//     if (j === 500) {
 //         break;
 //     }
 //     console.log(j);
@@ -223,10 +228,10 @@ function allOddNumbersToX (x) {
         }
         console.log(i);
     }
-    return x;
+    // return x;
 }
 
-// allOddNumbersToX(17);
+allOddNumbersToX(17);
 // allOddNumbersToX(18);
 
 
