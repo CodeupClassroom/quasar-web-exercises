@@ -42,43 +42,54 @@
         // ============================= Declaring/Initializing an Array with Array Literal Syntax
 
         // empty arrays may be declared
-            // var pies = [];
-            // console.log(pies);
+        //     var pies = [];
+        //     console.log(pies);
             //
             // var pies = ["apple", "cherry", "key lime", "huckleberry"];
+            // console.log(pies);
+            // var applePie = pies[0];
+            // var keyLimePie = pies[2];
+            //
+            // console.log(applePie);
+            // console.log(keyLimePie);
+            // console.log(pies[2]);
+            // //Replace a pie
+            // pies[3] = "banana";
             // console.log(pies);
 
         // declaring and initializing a large array
 
-            // var students = [
-            //     "Student 1",
-            //     "Student 2",
-            //     "Student 3",
-            //     "Student 4",
-            //     "Student 5",
-            //     "Student 6",
-            //     "Student 7",
-            //     "Student 8"
-            // ];
+            var students = [
+                "Student 1",
+                "Student 2",
+                "Student 3",
+                "Student 4",
+                "Student 5",
+                "Student 6",
+                "Student 7",
+                "Student 8"
+            ];
 
 
         // separate declaration and initialization
 
-            // var pies = [];
-            // pies[0] = "apple";
-            // pies[1] = "cherry";
-
-        // declaring and initializing a high index number
-            // pies[10] = "huckleberry";
-            // console.log(pies);
+        //     var pies = [];
+        //     pies[0] = "apple";
+        //     pies[1] = "cherry";
+        //
+        // // declaring and initializing a high index number
+        //     pies[10] = "huckleberry";
+        //     console.log(pies);
 
 
 
         // ============================= Counting Array Items
 
-            // var pies = ["apple", "cherry", "key lime", "huckleberry"];
+            var pies = ["apple", "cherry", "key lime", "huckleberry"];
             // var numberOfPies = pies.length;
             // console.log(numberOfPies);
+            // pies[9] = null;
+            // pies[10] = "banana";
 
 
         // ============================= Accessing Array Elements
@@ -105,7 +116,7 @@
 
         // example
 
-            // for (var i = 0; i < pies.length; i += 1) {
+            // for (var i = 0; i < pies.length ; i += 1) {
             //     console.log("I like " + pies[i]);
             // }
 
@@ -114,7 +125,7 @@
             // for (var i = pies.length - 1; i >= 0; i -= 1) {
             //     console.log("I like " + pies[i]);
             // }
-            //
+            // //
             // console.log(pies);
 
 
@@ -140,32 +151,32 @@
 
 
         // standard syntax
-            // var pies = ["apple", "cherry", "key lime", "huckleberry"];
+            var pies = ["apple", "cherry", "key lime", "huckleberry"];
 
         // defining all three parameters
-            // pies.forEach(function(element, index, array){
-            //
-            //     console.log("Element " + element + " is at index " + index);
-            //     console.log(pies);
-            //     console.log(array);
-            //
-            // });
+        //     pies.forEach(function(element, index, array){
+        //
+        //         console.log("Element " + element + " is at index " + index);
+        //         console.log(pies);
+        //         console.log(array);
+        //
+        //     });
 
 
         // with different parameter names
-            // pies.forEach(function(pie, index, array){
-            //
-            //     console.log("Element " + pie + " is at index " + index);
-            //     console.log(pies);
-            //     console.log(array);
-            //
-            // });
+        //     pies.forEach(function(pie, index, array){
+        //
+        //         console.log("Element " + pie + " is at index " + index);
+        //         // console.log(pies);
+        //         // console.log(array);
+        //
+        //     });
 
 
         // with only one parameter
 
-            // pies.forEach(function(element){
-            //     console.log("Element " + element);
+            // pies.forEach(function(pie, index){
+            //     console.log("Element " + index);
             // });
             //
             //
@@ -174,13 +185,22 @@
 
         // callback function syntax
 
-            // function logElements(element) {
-            //     console.log("Element " + element);
-            // }
+            function logElements(element, index) {
+                console.log("Element " + element + " is at index " + index);
+            }
             //
-            // pies.forEach(logElements);
+            pies.forEach(logElements);
+            pies.forEach(function(element, index) {
+                console.log("Element " + element + " is at index " + index);
+            });
+            //students.forEach(logElements("Douglas", 0));
 
-
+            // function myForEach(array, callBack) {
+            //     for (var i = 0; i < array.length; i++) {
+            //         callBack(array[i], i, array);
+            //     }
+            // }
+            // myForEach(students, logElements());
     </script>
 
 </body>
