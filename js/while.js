@@ -31,10 +31,10 @@ function timesTwo() {
 // Use a do-while loop to log to the console the
 // amount of cones sold to each person.
 
-function iceCream() {
-  // Random Formula:
+function iceCreamPrompt() {
+  // Random Formula (Exclusive of max):
   // Math.floor(Math.random() * (max - min)) + min
-  var allCones = Math.floor(Math.random() * 50) + 50;
+  var allCones = Math.floor(Math.random() * 51) + 50;
   var userCones;
 
   do {
@@ -68,4 +68,30 @@ function iceCream() {
   } while (allCones > 0);
 
   alert("Yay! I sold them all!");
+}
+
+function iceCreamRand() {
+  // Random Formula (Exclusive of max):
+  // Math.floor(Math.random() * (max - min)) + min
+  var allCones = Math.floor(Math.random() * 51) + 50;
+
+  do {
+    var randCones = Math.floor(Math.random() * 5) + 1;
+
+    if (randCones > allCones) {
+      console.log(
+        "Sorry! I can't sell you " +
+          randCones +
+          " cones, I only have " +
+          allCones +
+          "."
+      );
+      continue;
+    }
+
+    allCones -= randCones;
+    console.log(randCones + " cones sold...");
+  } while (allCones > 0);
+
+  console.log("Yay! I sold them all!");
 }
