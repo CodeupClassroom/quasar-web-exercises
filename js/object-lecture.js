@@ -202,6 +202,6 @@ theGarage.forEach(function(car){
     car.turnOn();
 })
 
-
+alert("Inside of my garage are : " + theGarage[1].make + " " + theGarage[1].model + " and a " + theGarage[0].make + " " + theGarage[0].model)
 
 //One final TODO: A bigger task - set up your own garage and add at least another vehicle into it. Log your garage array to verify it contains the cars you want - once your garage has the right cars, write a loop to access some properties or a method from them!
