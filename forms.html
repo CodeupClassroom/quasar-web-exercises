@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+<h1>Veridian Dynamics Registration Form</h1>
+<form method="GET" action="https://request-inspector.glitch.me/">
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="example@codeup.com">
+    </div>
+    <br>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <br>
+    <div>
+        <label for="bio">Bio</label>
+        <textarea name="bio" id="bio" cols="50" rows="10" placeholder="Tell us about yourself"></textarea>
+    </div>
+    <br>
+    <section>
+        <h5>How did you hear about us?</h5>
+        <div>
+            <label for="billboard">Billboard</label>
+            <input type="radio" name="hearAboutUs" id="billboard" value="billboard">
+        </div>
+        <div>
+            <label for="radio">Radio advertisement</label>
+            <input type="radio" name="hearAboutUs" id="radio" value="radio advertisement">
+        </div>
+        <div>
+            <label for="internet">Internet advertisement</label>
+            <input type="radio" name="hearAboutUs" id="internet" value="internet advertisement">
+        </div>
+        <div>
+            <label for="other">Other</label>
+            <input type="radio" name="hearAboutUs" id="other" value="other">
+        </div>
+    </section>
+    <br>
+    <section>
+        <label for="webBrowser-select">What browser are you using?</label>
+        <select name="webBrowsers" id="webBrowser-select">
+            <option value="" disabled selected>--Please choose an option--</option>
+            <option value="google chrome">Google Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="safari">Safari</option>
+            <option value="opera">Opera</option>
+            <option value="internet explorer">Internet Explorer</option>
+            <option value="other">Other</option>
+        </select>
+    </section>
+
+<!--    <input type="submit" value="Register">-->
+    <button type="submit">Register</button>
+</form>
+
+
+
+</body>
+</html>
