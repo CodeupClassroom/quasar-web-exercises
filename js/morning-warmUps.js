@@ -17,7 +17,7 @@
 //4 arguments = 4 parameters (numChildren, partnerName, geoLocation, jobTitle)
 //"Hey, you will live in geoLocation working as a jobtitle with numChildren kids and married to partnerName"
 
-function tellFortune(numChildren, jobTitle, geoLocation, partnerName){
+function tellFortune(numChildren, partnerName, geoLocation, jobTitle){
 
     var output = "You will have " + numChildren + " children and work as a " + jobTitle + " living in " + geoLocation + " married to your wonderful partner " + partnerName;
 
