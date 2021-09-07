@@ -12,7 +12,7 @@
     ALL H1 descended from #container w/ .fancy-header*/
 
 #container h1.fancy-header {
-    color: blue;
+    color: #f0df16;
     text-decoration: underline;
 }
 
@@ -30,4 +30,8 @@ em {
     that are a direct child of an element with class="article" */
 .article > a {
     float:right;
+}
+
+body {
+    color: red;
 }
