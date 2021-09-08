@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Basics Examples</title>
+  <style>
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Helvetica;
+    font-weight: bold;
+  }
+
+  /* Example 1 && 5 : Direction && justify/align [1], Flex Grow [5] */
+
+    .flex-container {
+      width: 100%;
+      /*height: 400px;*/
+      border: 3px solid goldenrod;
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+      /*align-items: flex-start; !* default behavior *!*/
+    }
+
+    #item1{
+      flex-grow: 1;
+    }
+
+    #item2 {
+      flex-grow: 1;
+    }
+
+    #item3{
+      flex-grow: 4;
+    }
+
+    .flex-item {
+      /*flex-grow: 1;*/
+      background: #BFD45D;
+      border: 2px solid #F9EFD6;
+      padding: 1em;
+    }
+
+/* Example 2: "Baseline" value w/ align items */
+
+/*.main-container {*/
+/*  display: flex;*/
+/*  align-items: baseline;*/
+/*  justify-content: center;*/
+/*  border: 5px solid goldenrod;*/
+/*  height: 100vh;*/
+/*}*/
+
+/*.main-container > div {*/
+/*  margin-top:50px;*/
+/*  border: 1px solid black;*/
+/*  !*margin: 0px 4px;*!*/
+/*  background-color: darksalmon;*/
+/*}*/
+
+/*.box1 {*/
+/*  font-size: 15px;*/
+/*}*/
+/*.box2 {*/
+/*  font-size: 30px;*/
+/*}*/
+/*.box3 {*/
+/*  font-size: 45px;*/
+/*}*/
+/*.box4 {*/
+/*  font-size: 60px;*/
+/*}*/
+/*.box5 {*/
+/*  font-size: 75px;*/
+/*}*/
+
+/*!* Example 3 && 4: Flex Wrap [3] and Flex Order [4] *!*/
+
+/*      .flex-container {*/
+/*        width: 50%;*/
+/*        height: 800px;*/
+/*        border: 3px solid goldenrod;*/
+/*        flex-direction: row;*/
+/*        display: flex;*/
+/*        flex-wrap: wrap;*/
+/*        !*align-items: flex-end;*!*/
+/*        !*align-content: space-between;*!*/
+/*        !*justify-content: center;*!*/
+/*      }*/
+
+/*      .flex-item {*/
+/*        background: #BFD45D;*/
+/*        border: 2px solid #F9EFD6;*/
+/*        padding: 1em;*/
+/*      }*/
+
+/*      #item12 {*/
+/*       align-self:flex-end;*/
+/*      }*/
+
+/*      #item7 {*/
+/*        order: -3;*/
+/*      }*/
+
+
+
+
+  </style>
+</head>
+<body>
+
+<!-- Example 1: Directions w/ justify and align -->
+<div class="flex-container">
+  <div id="item1" class="flex-item">Item 1</div>
+  <div id="item2" class="flex-item">Item 2</div>
+  <div id="item3" class="flex-item">Item 3</div>
+</div>
+
+<!-- Example 2: Baseline! For: different height containers :) -->
+
+<!--<div class="main-container">-->
+<!-- <div class="box1">first</div>-->
+<!-- <div class="box2">second</div>-->
+<!-- <div class="box3">third</div>-->
+<!-- <div class="box4">fourth</div>-->
+<!-- <div class="box5">fifth</div>-->
+<!--</div>-->
+
+<!-- Example 3: Flex Wrap w/ many items -->
+<!--<div class="flex-container">-->
+<!--  <div class="flex-item">Item 1</div>-->
+<!--  <div class="flex-item">Item 2</div>-->
+<!--  <div class="flex-item">Item 3</div>-->
+<!--  <div class="flex-item">Item 4</div>-->
+<!--  <div class="flex-item">Item 5</div>-->
+<!--  <div class="flex-item">Item 6</div>-->
+<!--  <div id="item7" class="flex-item">Item 7</div>-->
+<!--  <div class="flex-item">Item 8</div>-->
+<!--  <div class="flex-item">Item 9</div>-->
+<!--  <div class="flex-item">Item 10</div>-->
+<!--  <div class="flex-item">Item 11</div>-->
+<!--  <div id="item12" class="flex-item">Item 12</div>-->
+<!--</div>-->
+
+</body>
+</html>
