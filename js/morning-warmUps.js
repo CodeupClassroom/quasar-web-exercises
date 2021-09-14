@@ -53,3 +53,34 @@ function calculateDogAge(puppyAge, conversionNum){
 
 }
 
+// TACO TUESDAY
+
+// Given arrays of strings that are orders of food in string form to your function, write a function named tacoTuesday that returns TRUE or FALSE if the array provided has any element mention the word 'taco' in its value.
+
+var hasTacos = ["blueberry muffin", "banana", "yogurt", "cereal", "brisket and egg taco"]
+
+var noTacos = ["parfait", "omlette de frumage", "protein shake", "fasting"]
+
+tacoTuesday(hasTacos) //true
+tacoTuesday(noTacos) //false
+
+//hint: String.includes() might be useful here. . combined with some kind of iterating structure? Something that might be able to go through each part of our array?. .
+
+function tacoTuesday(arr){
+
+    //arrays have length < use that for my loop
+    //a FOR loop is good for set numbers of iterations
+    for(var i = 0; i < arr.length; i++){
+
+        //as we go through the array: check the element to see if it has the word 'taco'
+        if(arr[i].includes("taco")){
+            //return true if you find a taco :)
+            return true;
+        }
+
+
+    }
+    //no tacos found - return false
+    return console.log("Did we find tacos?" + false);
+
+}
