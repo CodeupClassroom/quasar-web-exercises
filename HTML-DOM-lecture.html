@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The Haberdashery</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<!--    BS CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+<!-- Any custom CSS below here-->
+<style>
+    .main-content {
+        background-color: #faebd7;
+        color: #1B0F1C;
+    }
+
+    body {
+        background-color: #DBA97E;
+    }
+    #top-header {
+        background-color: #97719F;
+        color: antiquewhite;
+    }
+</style>
+
+</head>
+
+<body class="h-100">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Howell's <i class="bi-shop mx-1"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#aboutUsModal" href="#">About Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="hat-search" name="hatSearch">
+                <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Where's the hat at?">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search for local hats</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="modal fade" id="aboutUsModal" tabindex="-1" aria-labelledby="aboutUsModal" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Our Hat-istory</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div id="top-header" class="jumbotron jumbotron-fluid border-bottom border-dark">
+    <div class="text-center">
+        <h1>Say hello: to HATS!</h1>
+        <h3 class="lower-header">The hats say hello back!</h3>
+        <h6 class="lower-header">Welcome to our hat page!</h6>
+    </div>
+</div>
+
+
+<div class="container h-50 main-content border border-primary">
+    <div class="row h-100 m-auto">
+
+        <div class="col-sm-3 d-flex align-items-center justify-content-center">
+            <p>I offer: <span><em>hats,</em><br>hat accessories,<br> <strong>hat opportunities,</strong><br> and hat perspectives.</span></p>
+        </div>
+
+        <div class="col-sm-6 d-flex align-items-center justify-content-center flex-column mt-5 mt-sm-0">
+            <table>
+                <h4>Special Offers</h4>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                </tr>
+                <tr class="special-offer">
+                    <td>Hat Appraisal</td>
+                    <td>$2.99</td>
+                </tr>
+                <tr class="special-offer">
+                    <td>2021 Fiesta Medals</td>
+                    <td>$11.99</td>
+                </tr>
+            </table>
+        </div>
+
+       <div class="col-sm-3 d-flex flex-column align-items-center justify-content-center mt-5 mt-sm-0">
+            <h4 id="best-seller">Our Top Sellers</h4>
+            <ol>
+                <li class="hat-sold">Baseball hats</li>
+                <li class="hat-sold">Fedora hats</li>
+                <li class="hat-sold">Cowboy hats</li>
+            </ol>
+       </div>
+
+    </div>
+</div>
+
+<footer class="text-center fixed-bottom bg-dark p-1">
+    <div class="container">
+        <a href="https://www.google.com" id="bottom-link">
+            <h6 class="mb-0">Hats?? Nope! Get me out of here!</h6>
+        </a>
+    </div>
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
