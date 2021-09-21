@@ -84,3 +84,23 @@ function tacoTuesday(arr){
     return console.log("Did we find tacos?" + false);
 
 }
+
+// Write a function logEvens that will accept a number parameter as an argument - that number will indicate the amount of times to print out all even numbers up to the argument provided.
+
+function logEvens(10)//2
+//4
+//6
+//8
+//10
+
+function logEvens(num){
+
+    for (var i = 0; i <= num; i++){
+
+        if(i % 2 === 0 && i !== 0){
+            console.log(i);
+        }
+
+    }
+
+}
