@@ -87,7 +87,7 @@ function tacoTuesday(arr){
 
 // Write a function logEvens that will accept a number parameter as an argument - that number will indicate the amount of times to print out all even numbers up to the argument provided.
 
-function logEvens(10)//2
+// function logEvens(10)//2
 //4
 //6
 //8
@@ -104,3 +104,22 @@ function logEvens(num){
     }
 
 }
+
+function logNum(num){
+
+    for (var i = 0; i <= num; i++){
+        if(i === 0){
+            console.log("Zero was first recorded in Mesopotamia :D")
+        } else if (i % 2 === 0){
+            console.log(i + " is an even number");
+        } else if (i % 2 === 1 ){
+            console.log(i + " is an odd number");
+        } else {
+            console.log(i + " is something o_O")
+        }
+    }
+
+}
+
+logNum(10)
+logNum(100)
