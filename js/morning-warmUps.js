@@ -130,7 +130,7 @@ logNum(100)
 //
 // "dt": 1618317040
 //
-// Would you be able to write me a function named covertDateTime() - convertDateTime will take in a single num parameter along the lines of the property above [1618317040].
+// Would you be able to write me a function named convertDateTime() - convertDateTime will take in a single num parameter along the lines of the property above [1618317040].
 //
 //     convertDateTime will return a form with human readable meaning - a date with a distinct month / year and perhaps other information.
 //
