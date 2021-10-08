@@ -123,3 +123,27 @@ function logNum(num){
 
 logNum(10)
 logNum(100)
+
+// A warmup that might take a little research:
+//
+//     So we've seen this dt property come up with some numbers in our work yesterday -
+//
+// "dt": 1618317040
+//
+// Would you be able to write me a function named covertDateTime() - convertDateTime will take in a single num parameter along the lines of the property above [1618317040].
+//
+//     convertDateTime will return a form with human readable meaning - a date with a distinct month / year and perhaps other information.
+//
+//
+
+var thisMorning = 1633702800;
+
+function convertDateTime(dtNum){
+
+    var dtInMs = dtNum * 1000; //seconds * 1000 = our milliseconds
+
+    var dateObj = new Date(dtInMs); //pass in milliseconds to Date(constructor)
+
+    return dateObj.toLocaleString();
+
+}
