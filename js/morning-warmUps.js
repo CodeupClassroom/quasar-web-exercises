@@ -121,6 +121,8 @@ function logNum(num){
 
 }
 
+
+
 logNum(10)
 logNum(100)
 

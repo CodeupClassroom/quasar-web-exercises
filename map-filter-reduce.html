@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map ~ Filter ~ Reduce</title>
+</head>
+<body>
+
+<script>
+
+//~ * Map * ~
+
+//TODO Together: Let's see a common approach we might have done in the past: our goal is to increase each element of an array by 1 [element + 1], then get an array back with those values
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+var numbersAddOne = [];
+
+for (var i = 0; i < numbers.length; i += 1) {
+    numbersAddOne.push(numbers[i] + 1);
+}
+// console.log(numbersAddOne); // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+//TODO Together: Now, let's achieve the same result with the first part of our lesson: the MAP method~
+
+let numbersAddOneMap = numbers.map(function(number){
+    return number + 1;
+})
+
+console.log(numbersAddOneMap);
+
+//As you can see, .map() accepts a callback function - that callback function is applied to each element in the collection. What about a dive into a deeper, more complicated collection?
+
+const favoriteRestaurants = [
+    {
+        name: "India Palace",
+        address: "8474 Fredericksburg Rd, San Antonio, TX 78229",
+        phone: "(210) 692-5262",
+        restaurantFeatures: ["buffet", "party room", "to-go"]
+    },
+    {
+        name: "Taqueria Jalisco",
+        address: "7094 Bandera Rd, San Antonio, TX 78238",
+        phone: "(210) 543-9400" ,
+        restaurantFeatures: ["to-go", "breakfast"]
+    },
+    {
+        name: "Sukhothai Thai Restaurant Express",
+        address: "7664 Tezel Rd Suite 105, San Antonio, TX 78250",
+        phone: "(210) 314-1106",
+        restaurantFeatures: ["to-go", "limited seating"]
+    }
+]
+
+
+//TODO Together: Let's get all these restaurant names out of this array of objects with .map()!
+
+let restaurantNames = favoriteRestaurants.map(function(restaurant){
+
+    // return restaurant.name.split("").reverse().join("").toLowerCase(); //having fun with .map + method chain()
+
+    return restaurant.name + ", phone: " + restaurant.phone; //Accessing two properties and combining in a new way
+})
+
+console.log(restaurantNames);
+
+//TODO: Create your own array of (up to 3 and at least 2) restaurant objects building off of the basic list you created during the MapBox exercise (or build one anew!) ~5 mins
+
+//TODO: Now, having created a personal array of restaurant objects for yourself, use .map() to get your favorite restaurant's names out of that collection, into another array, and out into the console! ~5 mins
+
+//~ * Filter * ~
+
+//TODO Together: Once again, let's take a look at the old way we might approach an issue: getting only one type of values out of an array (for example: even numbers only from an array of nums!)
+
+// var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// var evens = [];
+
+// for (var i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 0) {
+//         evens.push(numbers[i]);
+//     }
+// }
+// console.log(evens); // [2, 4, 6, 8, 10]
+
+
+//TODO Together: Now, let's refactor the above using the ES6 .filter() method with the same goal: even numbers only!
+
+let evens = numbers.filter(function(number){
+    return number % 2 === 0;
+})
+
+console.log("es6 version of evens:");
+console.log(evens);
+
+
+//TODO Together: Using my favoriteRestaurants list, let's filter out all of the non-buffet restaurants
+
+let hasBuffet = favoriteRestaurants.filter(function(restaurant){
+    return restaurant.restaurantFeatures.includes("buffet");
+})
+
+console.log(hasBuffet);
+
+//TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
+// TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
+
+//~ * Reduce * ~
+
+//Reduce is an interesting animal in and of itself: it's a way to reduce a collection down to, typically, a single value of some kind:
+
+//TODO Together: Let's sum up some numbers with the .reduce() method and a number array!
+
+// let numbers = [1, 2, 3, 4, 5];
+
+//in the past: we would have built out a loop, probably used a var of sum, and had a look inside of the loop of sum += numbers[i], spit out sum with the sum of our numbers
+
+//In ES6 with .reduce(). .reduce() has a couple of components to it: .reduce(callbackFunction, initialValue)
+
+
+
+//TODO Together: Let's take a step a bit deeper with .reduce() - .reduce()'s output can take many forms and shapes. For example, let's say we wanted to have a little Javascript that would count the length of the strings in an array and return that info back to us in an object. For example: ["Codeup", "San", Antonio", "Dallas", "Quasar", Cohort", "ES6"] would get us: Object { Codeup: 6, San: 3, Antonio: 7, Dallas: 6, Quasar: 6, Cohort: 6, ES6: 3 }
+
+let stringArr = ["Codeup", "San", "Antonio", "Dallas", "Quasar", "Cohort", "ES6"];
+
+
+//TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
+
+
+</script>
+</body>
+</html>
