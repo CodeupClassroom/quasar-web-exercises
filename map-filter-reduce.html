@@ -105,17 +105,33 @@ console.log(hasBuffet);
 //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
 // TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
 
+//let me filter out all of the restaurants with names shorter than 17 characters [why? All of my restaurants have long names :(]
+
+let namelessthan17 = favoriteRestaurants.filter(function (restaurant){
+    return restaurant.name.length < 17;
+})
+
+console.log("Name with fewer than 17 characters:");
+console.log(namelessthan17);
+
 //~ * Reduce * ~
 
 //Reduce is an interesting animal in and of itself: it's a way to reduce a collection down to, typically, a single value of some kind:
 
 //TODO Together: Let's sum up some numbers with the .reduce() method and a number array!
 
-// let numbers = [1, 2, 3, 4, 5];
+let numbersReduce = [1, 2, 3, 4, 5];
 
 //in the past: we would have built out a loop, probably used a var of sum, and had a look inside of the loop of sum += numbers[i], spit out sum with the sum of our numbers
 
-//In ES6 with .reduce(). .reduce() has a couple of components to it: .reduce(callbackFunction, initialValue)
+let sum = numbersReduce.reduce(function(total, number){
+    return total + number;
+}, 100)
+
+console.log("Here's our SUM from our first .reduce example");
+console.log(sum);
+
+//In ES6 with .reduce(). .reduce() has a couple of components to it: .reduce(callbackFunction,[... initialValue])
 
 
 
@@ -123,9 +139,29 @@ console.log(hasBuffet);
 
 let stringArr = ["Codeup", "San", "Antonio", "Dallas", "Quasar", "Cohort", "ES6"];
 
+let strLengthObj = stringArr.reduce(function (objectProp, element){
+    objectProp[element] = element.length; //assign the length as a value of the property named element {elementName: elementLength}
+    return objectProp;
+}, {})
+
+console.log(strLengthObj);
+
 
 //TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
+let family = [{name: "D. Howell", age: 80}, {name: "J. Howell", age: 77}, {name: "A. G.", age: 27}];
 
+let totalAge = family.reduce(function(result, individual){
+        return result + individual.age;
+}, 0)
+
+// result = 0 [step one]
+// iteration 1: 0 + individual[0].age (80)
+//iteration 2: 80 + individual[1].age (77)
+// iteration 3: 157 + individual[2].age (27)
+// No more array elements to go through. .
+// . . our total is 184 [and we see it]
+
+console.log(totalAge);
 
 </script>
 </body>
