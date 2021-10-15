@@ -42,20 +42,47 @@ console.log("A promise lecture");
 //         console.log("err", err);
 //     })
 
-fetch('https://pokeapi.co/api/v2/pokemon')
-    .then((response)=>response.json())
-    .then((jsonData)=>jsonData.results)
-    .then((results)=>results.forEach((result)=>console.log(result.name)));
+// fetch('https://pokeapi.co/api/v2/pokemon')
+//     .then((response)=>response.json())
+//     .then((jsonData)=>jsonData.results)
+//     .then((results)=>results.forEach((result)=>console.log(result.name)));
 
 // BONUS: Is there a way for us to clean up our code?
 
 // Let's try working with the Star Wars API!
 
 // TODO: Using Promises, make a fetch request to the Star Wars API
-
-// TODO: Use Promise chaining to console log the json response
-
+// fetch('https://swapi.dev/api/films')
+// // TODO: Use Promise chaining to console log the json response
+//     .then((response)=>{
+//         //console.log(response.json());
+//         return response.json();
+//     }).then((starWarsFilmsData)=>{
+//         //starWarsFilmsData is the parsed object from the call to response.json()
+//         console.log(starWarsFilmsData.results);
+//         starWarsFilmsData.results.forEach(function(film){
+//             console.log(film.title)
+//         })
+//     })
 // TODO: chain another method that iterates through the results array and console logs the names
 
 // TODO: Demonstrate Promise.all and Promise.race
+var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
+let starWarsAPI = fetch('https://swapi.dev/api/films');
 
+// Promise.all([pokemonAPI, starWarsAPI])
+//     .then((responses)=>{
+//         //Responses contains the resolved promises in the same order that they were passed into the all method.
+//         //You don't have to do this
+//         //console.log(responses[0].json().then((parsedData)=>{console.log(parsedData)}))
+//         return Promise.all(
+//                 responses.map((response)=>{
+//                     return response.json()
+//                 }
+//             ))
+//     }).then((parsedResults)=>{
+//         console.log(parsedResults);
+//     });
+
+Promise.race([starWarsAPI, pokemonAPI])
+    .then((response)=>{console.log(response.url)})
