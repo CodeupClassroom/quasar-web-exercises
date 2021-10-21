@@ -22,9 +22,26 @@ $('a').click(function(e) {
 // Each list should contain a national park name in an h3 element,
 // and a ul of 4 facts about the park
 
-// 3.Create a button that, when clicked, makes the last li in each ul have a yellow background.
+// 3.Create a button that, when clicked,
+// makes the last li in each ul have a yellow background.
+$('#listyellow').click(function(event){
+    event.preventDefault();
+    $('ul').each(function () {
+        $(this).children().last().css('background-color','yellow')
 
-// 4.When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    })
+})
+// 4.When any h3 is clicked, the lis underneath it should be bolded.
+// Use font-weight: bold to achieve this.
+$('h3').click(function (event) {
+event.preventDefault();
+$(this).next().css('font-weight','bold');
+})
 
-// 5.When any list item is clicked, first li of the parent ul should have a font color of blue.
+// 5.When any list item is clicked,
+// first li of the parent ul should have a font color of blue.
+$('li').click(function (event) {
+event.preventDefault();
+$(this).parent().children().first().css('color','blue')
+})
 
